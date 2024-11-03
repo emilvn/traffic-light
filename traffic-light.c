@@ -2,33 +2,33 @@
 #define MY_PORT_DDR *(unsigned char*)0x2A
 #define LONG_PAUSE 1000000
 #define SHORT_PAUSE 200000
-#define NS_GREEN_1 (1 << 2)
-#define NS_GREEN_2 (1 << 5)
-#define NS_YELLOW_1 (1 << 3)
-#define NS_YELLOW_2 (1 << 6)
-#define NS_RED_1 (1 << 4)
-#define NS_RED_2 (1 << 7)
-#define GREEN_1_ON MY_PORT = MY_PORT | NS_GREEN_1
-#define GREEN_2_ON MY_PORT = MY_PORT | NS_GREEN_2
-#define YELLOW_1_ON MY_PORT = MY_PORT | NS_YELLOW_1
-#define YELLOW_2_ON MY_PORT = MY_PORT | NS_YELLOW_2
-#define RED_1_ON MY_PORT = MY_PORT | NS_RED_1
-#define RED_2_ON MY_PORT = MY_PORT | NS_RED_2
-#define GREEN_1_OFF MY_PORT = MY_PORT & ~NS_GREEN_1
-#define GREEN_2_OFF MY_PORT = MY_PORT & ~NS_GREEN_2
-#define YELLOW_1_OFF MY_PORT = MY_PORT & ~NS_YELLOW_1
-#define YELLOW_2_OFF MY_PORT = MY_PORT & ~NS_YELLOW_2
-#define RED_1_OFF MY_PORT = MY_PORT & ~NS_RED_1
-#define RED_2_OFF MY_PORT = MY_PORT & ~NS_RED_2
+#define GREEN_1 (1 << 2)
+#define GREEN_2 (1 << 5)
+#define YELLOW_1 (1 << 3)
+#define YELLOW_2 (1 << 6)
+#define RED_1 (1 << 4)
+#define RED_2 (1 << 7)
+#define GREEN_1_ON MY_PORT = MY_PORT | GREEN_1
+#define GREEN_2_ON MY_PORT = MY_PORT | GREEN_2
+#define YELLOW_1_ON MY_PORT = MY_PORT | YELLOW_1
+#define YELLOW_2_ON MY_PORT = MY_PORT | YELLOW_2
+#define RED_1_ON MY_PORT = MY_PORT | RED_1
+#define RED_2_ON MY_PORT = MY_PORT | RED_2
+#define GREEN_1_OFF MY_PORT = MY_PORT & ~GREEN_1
+#define GREEN_2_OFF MY_PORT = MY_PORT & ~GREEN_2
+#define YELLOW_1_OFF MY_PORT = MY_PORT & ~YELLOW_1
+#define YELLOW_2_OFF MY_PORT = MY_PORT & ~YELLOW_2
+#define RED_1_OFF MY_PORT = MY_PORT & ~RED_1
+#define RED_2_OFF MY_PORT = MY_PORT & ~RED_2
 
 void setup() {
   // set ports as output ports
-  MY_PORT_DDR = MY_PORT_DDR | NS_GREEN_1;
-  MY_PORT_DDR = MY_PORT_DDR | NS_GREEN_2;
-  MY_PORT_DDR = MY_PORT_DDR | NS_YELLOW_1;
-  MY_PORT_DDR = MY_PORT_DDR | NS_YELLOW_2;
-  MY_PORT_DDR = MY_PORT_DDR | NS_RED_1;
-  MY_PORT_DDR = MY_PORT_DDR | NS_RED_2;
+  MY_PORT_DDR = MY_PORT_DDR | GREEN_1;
+  MY_PORT_DDR = MY_PORT_DDR | GREEN_2;
+  MY_PORT_DDR = MY_PORT_DDR | YELLOW_1;
+  MY_PORT_DDR = MY_PORT_DDR | YELLOW_2;
+  MY_PORT_DDR = MY_PORT_DDR | RED_1;
+  MY_PORT_DDR = MY_PORT_DDR | RED_2;
 }
 
 void pause(long cycles){
