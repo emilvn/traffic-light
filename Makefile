@@ -7,9 +7,9 @@ PROGRAMMER = arduino
 SRC_DIR = src
 INCLUDE_DIR = include
 BUILD_DIR = build
-SRC = $(SRC_DIR)/example.c
-OBJ = $(BUILD_DIR)/example.elf
-HEX = $(BUILD_DIR)/example.hex
+SRC = $(SRC_DIR)/traffic_light.c
+OBJ = $(BUILD_DIR)/traffic_light.elf
+HEX = $(BUILD_DIR)/traffic_light.hex
 
 # Compiler and flags
 CC = avr-gcc
